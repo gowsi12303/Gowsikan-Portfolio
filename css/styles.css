@@ -20,6 +20,12 @@
   --accent-700: #5744c9;
   --accent-glow: rgba(139, 123, 255, 0.35);
 
+  /* Personal identity accent (GL monogram, motto, hero code-nodes only):
+     indigo shading into a soft cyan. */
+  --cyan: #5ccfe6;
+  --cyan-glow: rgba(92, 207, 230, 0.35);
+  --identity-gradient: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
+
   --gold: #f2c14e;
   --gold-dark: #1a1400;
   --gold-glow: rgba(242, 193, 78, 0.28);
@@ -289,10 +295,45 @@ main,
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
   white-space: nowrap;
+}
+
+/* "GL" monogram: gradient hairline border around gradient-filled initials. */
+.logo-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--bg-raised), var(--bg-raised)) padding-box,
+    var(--identity-gradient) border-box;
+  box-shadow: 0 0 18px -8px var(--cyan-glow);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  transition: box-shadow 0.3s ease, transform 0.3s var(--ease);
+}
+
+.logo-mark span {
+  background: var(--identity-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo:hover .logo-mark,
+.logo:focus-visible .logo-mark {
+  box-shadow: 0 0 22px -4px var(--cyan-glow);
+  transform: translateY(-1px);
 }
 
 .logo .accent {
@@ -581,6 +622,7 @@ main,
 .hero-copy > *:nth-child(4) { animation-delay: 0.38s; }
 .hero-copy > *:nth-child(5) { animation-delay: 0.49s; }
 .hero-copy > *:nth-child(6) { animation-delay: 0.6s; }
+.hero-copy > *:nth-child(7) { animation-delay: 0.71s; }
 
 .eyebrow {
   color: var(--accent);
@@ -602,6 +644,49 @@ main,
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   font-weight: 600;
   color: var(--text-secondary);
+}
+
+/* "Build • Solve • Create" — small spaced caps, secondary to name and role. */
+.hero-motto {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65em;
+  margin-top: 14px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.hero-motto::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--identity-gradient);
+}
+
+.hero-motto-sep {
+  color: var(--cyan);
+  letter-spacing: 0;
+  opacity: 0.8;
+}
+
+/* Terminal-style block caret; ends visible when motion is reduced. */
+.hero-motto-caret {
+  width: 7px;
+  height: 1.1em;
+  margin-left: -0.35em;
+  border-radius: 1px;
+  background: var(--cyan);
+  opacity: 0.7;
+  animation: caret-blink 1.2s step-end infinite;
+}
+
+@keyframes caret-blink {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0; }
 }
 
 .hero-tagline {
@@ -744,6 +829,63 @@ main,
   }
 }
 
+/* Faint code-node clusters in the hero's side gutters — wide screens only,
+   where they can never sit behind text. */
+.hero-nodes {
+  display: none;
+  position: absolute;
+  width: 116px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  color: var(--cyan);
+  opacity: 0.2;
+}
+
+.hero-nodes path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+.hero-nodes circle {
+  fill: var(--bg);
+  stroke: currentColor;
+  stroke-width: 1.2;
+}
+
+.hero-nodes .hero-node-pulse {
+  fill: currentColor;
+  animation: node-pulse 4s ease-in-out infinite;
+}
+
+.hero-nodes text {
+  fill: var(--accent);
+  font: 600 11px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.hero-nodes-left {
+  top: 14%;
+  left: 1.5%;
+}
+
+.hero-nodes-right {
+  bottom: 12%;
+  right: 1.5%;
+}
+
+@media (min-width: 1400px) {
+  .hero-nodes {
+    display: block;
+  }
+}
+
 .hero-scroll-cue {
   display: flex;
   justify-content: center;
@@ -784,6 +926,12 @@ main,
   }
   .hero-copy .hero-tagline {
     margin-inline: auto;
+  }
+  .hero-motto {
+    justify-content: center;
+  }
+  .hero-motto::before {
+    display: none;
   }
   .hero-actions {
     justify-content: center;
