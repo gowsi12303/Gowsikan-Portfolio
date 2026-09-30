@@ -4,26 +4,42 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gowsikan LV — Software Developer</title>
-<meta name="description" content="Portfolio of Gowsikan LV, a software developer in Chennai, India specializing in full-stack web development, Django REST APIs, and AI-assisted engineering workflows." />
-<meta name="theme-color" content="#0a0a0f" />
-<meta name="color-scheme" content="dark" />
+<meta name="description" content="Portfolio of Gowsikan LV, a software developer in Chennai, India specializing in full-stack web development with Python, Django REST Framework, React.js and SQL, and AI-assisted engineering workflows." />
+<meta name="author" content="Gowsikan LV" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="color-scheme" content="light dark" />
+<link rel="canonical" href="https://gowsikan-portfolio-ivory.vercel.app/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://gowsikan-portfolio-ivory.vercel.app/" />
+<meta property="og:site_name" content="Gowsikan LV" />
 <meta property="og:title" content="Gowsikan LV — Software Developer" />
 <meta property="og:description" content="Full-stack developer building modern web applications with AI-assisted development. Featured project: NOSTRA, a full-stack fashion e-commerce platform built with Django REST Framework and React 19." />
-<meta property="og:image" content="assets/avatar.png" />
+<meta property="og:image" content="https://gowsikan-portfolio-ivory.vercel.app/assets/avatar.png" />
+<meta property="og:image:alt" content="Portrait of Gowsikan LV" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Gowsikan LV — Software Developer" />
 <meta name="twitter:description" content="Full-stack developer building modern web applications with AI-assisted development." />
-<meta name="twitter:image" content="assets/avatar.png" />
+<meta name="twitter:image" content="https://gowsikan-portfolio-ivory.vercel.app/assets/avatar.png" />
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+<script>
+  /* Apply the saved (or system) theme before first paint to avoid a flash. */
+  (function () {
+    var theme = null;
+    try { theme = localStorage.getItem("theme"); } catch (e) {}
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
 <link rel="stylesheet" href="css/styles.css" />
 
 <script type="application/ld+json">
@@ -32,7 +48,10 @@
   "@type": "Person",
   "name": "Gowsikan LV",
   "jobTitle": "Software Developer",
+  "url": "https://gowsikan-portfolio-ivory.vercel.app/",
+  "image": "https://gowsikan-portfolio-ivory.vercel.app/assets/avatar.png",
   "email": "mailto:gowsikanlakshmanan@gmail.com",
+  "telephone": "+919894341940",
   "sameAs": [
     "https://github.com/gowsi12303",
     "https://www.linkedin.com/in/gowsikan-lv-08431725a/"
@@ -41,633 +60,781 @@
     "@type": "PostalAddress",
     "addressLocality": "Chennai",
     "addressCountry": "IN"
-  }
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Bishop Heber College" }
+  ],
+  "knowsAbout": ["Python", "Django", "Django REST Framework", "React.js", "SQL", "AI-Assisted Development"]
 }
 </script>
 </head>
 <body>
-<div class="bg-fx" aria-hidden="true">
-  <div class="bg-grid"></div>
-  <div class="bg-glow bg-glow-1"></div>
-  <div class="bg-glow bg-glow-2"></div>
-  <div class="bg-particles" id="bgParticles"></div>
-</div>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M6.5 8.5v11M6.5 5.01V5m-.01 0a1.5 1.5 0 1 1 0-.01ZM11 8.5v11m0-6.5c0-2.5 2-4.5 4.5-4.5S20 10.5 20 13v6.5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3M7 15h10"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M6 8.5v7M18 8.5a7 7 0 0 1-7 7H8.5"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.5-9 6 6 0 0 1 11.6 1.5A4 4 0 0 1 17.5 18Z"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+  <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M12 7v4m0 0-5.2 6.3M12 11l5.2 6.3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M10 4a2 2 0 1 1 4 0v2h4a1 1 0 0 1 1 1v4h-2a2 2 0 1 0 0 4h2v4a1 1 0 0 1-1 1h-4v-2a2 2 0 1 0-4 0v2H6a1 1 0 0 1-1-1v-4h2a2 2 0 1 0 0-4H5V7a1 1 0 0 1 1-1h4Z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 4H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1M16 4h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1"/></symbol>
+  <symbol id="i-hash" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M10 4 8 20M16 4l-2 16"/></symbol>
+  <symbol id="i-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h15l-4-4M20 16H5l4 4"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3M16 7l3 3M14 9l2 2"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 10v10"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-browser" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5Z"/></symbol>
+  <symbol id="i-a11y" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.5"/><path d="m5 8.5 7 1.5 7-1.5M12 10v4.5M12 14.5 9 21M12 14.5l3 6.5"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z"/></symbol>
+  <symbol id="i-cursor" viewBox="0 0 24 24"><path d="m4 4 7 17 2.5-7.5L21 11 4 4Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12Z"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+</svg>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="logo" href="#top" aria-label="Gowsikan LV — home"><span class="logo-mark" aria-hidden="true"><span>GL</span></span>Gowsikan<span class="accent">.</span>LV</a>
+    <a class="brand" href="#home" aria-label="Gowsikan LV — back to top">Gowsikan LV</a>
 
     <nav class="primary-nav" aria-label="Primary">
       <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
       <ul>
-        <li><a href="#home" data-nav>Home</a></li>
         <li><a href="#about" data-nav>About</a></li>
         <li><a href="#skills" data-nav>Skills</a></li>
         <li><a href="#experience" data-nav>Experience</a></li>
-        <li><a href="#projects" data-nav class="nav-flagship">Projects</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
         <li><a href="#education" data-nav>Education</a></li>
         <li><a href="#contact" data-nav>Contact</a></li>
       </ul>
     </nav>
 
-    <a class="btn btn-outline btn-small header-resume" href="assets/Gowsikan_LV_Resume.pdf" download="Gowsikan_LV_Resume.pdf">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-      Resume
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle navigation menu">
-      <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn-touch header-touch" href="#contact">Get in Touch</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle navigation menu">
+        <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
   </div>
 
-  <div class="mobile-nav" id="mobileNav" hidden>
-    <ul>
-      <li><a href="#home" data-nav>Home</a></li>
-      <li><a href="#about" data-nav>About</a></li>
-      <li><a href="#skills" data-nav>Skills</a></li>
-      <li><a href="#experience" data-nav>Experience</a></li>
-      <li><a href="#projects" data-nav>Projects</a></li>
-      <li><a href="#education" data-nav>Education</a></li>
-      <li><a href="#contact" data-nav>Contact</a></li>
-      <li><a href="assets/Gowsikan_LV_Resume.pdf" download="Gowsikan_LV_Resume.pdf">Download Resume</a></li>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" hidden>
+    <ul class="wrap">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="mobile-nav-footer">
+        <a class="btn-touch mobile-nav-touch" href="#contact">Get in Touch</a>
+        <a class="mobile-nav-resume" href="assets/Gowsikan_LV_Resume.pdf" download="Gowsikan_LV_Resume.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download Resume</a>
+      </li>
     </ul>
-  </div>
+  </nav>
 </header>
 
 <main id="main">
 
-  <!-- HERO / HOME -->
+  <!-- HERO -->
   <section id="home" class="hero" aria-labelledby="hero-heading">
-    <svg class="hero-nodes hero-nodes-left" viewBox="0 0 120 150" aria-hidden="true" focusable="false">
-      <path d="M20 22 60 50 100 30M60 50 44 96 88 118M44 96 16 130"/>
-      <circle cx="20" cy="22" r="3.5"/><circle cx="100" cy="30" r="3"/><circle class="hero-node-pulse" cx="60" cy="50" r="4"/>
-      <circle cx="44" cy="96" r="3.5"/><circle cx="88" cy="118" r="3"/><circle cx="16" cy="130" r="2.5"/>
-      <text x="70" y="86">&lt;/&gt;</text>
-    </svg>
-    <svg class="hero-nodes hero-nodes-right" viewBox="0 0 120 150" aria-hidden="true" focusable="false">
-      <path d="M20 22 60 50 100 30M60 50 44 96 88 118M44 96 16 130"/>
-      <circle cx="20" cy="22" r="3.5"/><circle cx="100" cy="30" r="3"/><circle class="hero-node-pulse" cx="60" cy="50" r="4"/>
-      <circle cx="44" cy="96" r="3.5"/><circle cx="88" cy="118" r="3"/><circle cx="16" cy="130" r="2.5"/>
-      <text x="70" y="86">{ }</text>
-    </svg>
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Software Developer · Chennai, India</p>
-        <h1 id="hero-heading">GOWSIKAN&nbsp;LV</h1>
-        <p class="hero-role">Software Developer</p>
-        <p class="hero-motto">
-          <span>Build</span><span class="hero-motto-sep" aria-hidden="true">&bull;</span><span>Solve</span><span class="hero-motto-sep" aria-hidden="true">&bull;</span><span>Create</span><span class="hero-motto-caret" aria-hidden="true"></span>
-        </p>
-        <p class="hero-tagline">&ldquo;Building modern web applications with full-stack technologies and AI-assisted development.&rdquo;</p>
-
-        <p class="badge badge-flagship">
-          <span class="badge-dot" aria-hidden="true"></span>
-          Featured project: NOSTRA
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">
-            View NOSTRA
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-outline" href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-            GitHub
-          </a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/gowsikan-lv-08431725a/" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5v11M6.5 5.01V5m-.01 0a1.5 1.5 0 1 1 0-.01ZM11 8.5v11m0-6.5c0-2.5 2-4.5 4.5-4.5S20 10.5 20 13v6.5"/></svg>
-            LinkedIn
-          </a>
-          <a class="btn btn-ghost" href="assets/Gowsikan_LV_Resume.pdf" download="Gowsikan_LV_Resume.pdf">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-            Resume
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-portrait">
-        <div class="portrait-parallax">
-          <div class="portrait-frame">
-            <img
-              src="assets/avatar.png"
-              alt="Portrait of Gowsikan LV"
-              width="460"
-              height="460"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </div>
-          <div class="orbit-chip orbit-chip-1" aria-hidden="true"><span>&lt;/&gt;</span></div>
-          <div class="orbit-chip orbit-chip-2" aria-hidden="true"><span>{ }</span></div>
-          <div class="orbit-chip orbit-chip-3" aria-hidden="true"><span class="orbit-chip-dot"></span><span>git commit</span></div>
-        </div>
-      </div>
+    <!-- Decorative backdrop: green glow around the photo + a slowly rotating star field (canvas, js/main.js) -->
+    <div class="hero-bg" aria-hidden="true">
+      <span class="hero-ambient"></span>
+      <canvas class="hero-stars" id="heroStars"></canvas>
     </div>
-    <div class="hero-scroll-cue" aria-hidden="true">
-      <span></span>
+    <div class="wrap hero-inner">
+      <div class="hero-visual hero-anim" style="--i:0">
+        <div class="profile">
+          <div class="profile-stage">
+            <span class="profile-glow" aria-hidden="true"></span>
+            <img class="profile-photo" src="assets/avatar.png" alt="Portrait of Gowsikan LV" width="460" height="460" loading="eager" fetchpriority="high" decoding="async" />
+
+            <!-- Decorative tech badges on a slow orbit; the same stack is listed as text in About and Skills -->
+            <div class="orbit" aria-hidden="true">
+              <span class="orbit-item" style="--a:-126deg;--i:0">
+                <span class="tech-orb" title="Python">
+                  <svg viewBox="0 0 24 24"><path fill="#3776ab" d="M11.9 2C8.4 2 7.6 3.5 7.6 5.3v2.3h4.5v.8H5.6C3.7 8.4 2 9.6 2 12.6c0 3 1.5 4.3 3.4 4.3h1.8v-2.6c0-2 1.7-3.6 3.6-3.6h4.7c1.6 0 2.9-1.3 2.9-2.9V5.3C18.4 3.5 16.8 2 11.9 2Z"/><path fill="#ffd43b" d="M12.1 22c3.5 0 4.3-1.5 4.3-3.3v-2.3h-4.5v-.8h6.5c1.9 0 3.6-1.2 3.6-4.2 0-3-1.5-4.3-3.4-4.3h-1.8v2.6c0 2-1.7 3.6-3.6 3.6H8.5c-1.6 0-2.9 1.3-2.9 2.9v2.5C5.6 20.5 7.2 22 12.1 22Z"/><circle cx="9.7" cy="4.7" r="0.95" fill="#fff"/><circle cx="14.3" cy="19.3" r="0.95" fill="#fff"/></svg>
+                </span>
+              </span>
+              <span class="orbit-item" style="--a:-54deg;--i:1">
+                <span class="tech-orb" title="Django">
+                  <svg viewBox="0 0 24 24"><rect class="orb-django-tile" width="24" height="24" rx="6"/><text x="12" y="16.6" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="800" letter-spacing="-0.6">dj</text></svg>
+                </span>
+              </span>
+              <span class="orbit-item" style="--a:18deg;--i:2">
+                <span class="tech-orb" title="JavaScript">
+                  <svg viewBox="0 0 24 24"><rect class="orb-js-tile" width="24" height="24" rx="4"/><text x="21" y="20.2" text-anchor="end" fill="#1a1a1a" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="-0.3">JS</text></svg>
+                </span>
+              </span>
+              <span class="orbit-item" style="--a:90deg;--i:3">
+                <span class="tech-orb" title="SQL">
+                  <svg class="orb-sql" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/><path d="M4.5 11.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/></svg>
+                </span>
+              </span>
+              <span class="orbit-item" style="--a:162deg;--i:4">
+                <span class="tech-orb" title="React.js">
+                  <svg class="orb-react" viewBox="-11.5 -10.23 23 20.46"><circle r="2.05" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="1.1"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="hero-hello hero-anim" style="--i:1">Hi, I'm</p>
+        <h1 id="hero-heading" class="hero-name hero-anim" style="--i:2">Gowsikan LV</h1>
+        <p class="hero-role hero-anim" style="--i:3">
+          <span class="sr-only">Software Engineer, Full-Stack Developer</span>
+          <span class="typed" id="heroTyped" aria-hidden="true">Software Engineer</span><span class="typed-caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero-intro hero-anim" style="--i:4">
+          Software Developer building full-stack web apps with Python, Django REST Framework, React.js and SQL
+          &mdash; using AI-assisted development, with test automation and WCAG accessibility testing experience.
+        </p>
+
+        <div class="hero-actions hero-anim" style="--i:5">
+          <a class="btn btn-primary" href="#contact">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            Contact Me
+          </a>
+          <a class="btn btn-secondary" href="assets/Gowsikan_LV_Resume.pdf" download="Gowsikan_LV_Resume.pdf">
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+            Download CV
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            GitHub
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/gowsikan-lv-08431725a/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            LinkedIn
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+
+      <a class="hero-scroll hero-anim" style="--i:6" href="#about" aria-label="Scroll to explore: go to the About section">
+        <svg class="hero-scroll-ring" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="heroScrollPath" d="M50 50 m-39 0 a39 39 0 1 1 78 0 a39 39 0 1 1 -78 0"/>
+          </defs>
+          <circle class="hero-scroll-dots" cx="50" cy="50" r="48"/>
+          <text><textPath href="#heroScrollPath" textLength="243" lengthAdjust="spacing">SCROLL TO EXPLORE &#8226; SCROLL TO EXPLORE &#8226; </textPath></text>
+        </svg>
+        <span class="hero-scroll-btn" aria-hidden="true">
+          <svg class="icon"><use href="#i-arrow-down"/></svg>
+        </span>
+      </a>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section section-no-divider" aria-labelledby="about-heading">
+  <section id="about" class="section section-soft" aria-labelledby="about-heading">
     <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">01</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">About</span>
-      </div>
-      <h2 id="about-heading" class="section-title reveal">A software developer in progress, in public</h2>
+      <header class="about-head reveal">
+        <p class="about-eyebrow">Get to know me</p>
+        <h2 id="about-heading" class="about-title">About Me</h2>
+        <span class="about-rule" aria-hidden="true"></span>
+      </header>
 
       <div class="about-grid">
-        <div class="about-story">
-          <article class="story-block reveal">
-            <span class="story-index">Background</span>
-            <p>
-              I'm a <strong>B.Sc. Computer Science graduate (2025)</strong> focused on frontend
-              development and modern web technologies, with experience working with
-              <strong>Python, Django REST Framework, React.js</strong> and <strong>SQL</strong>.
-            </p>
-          </article>
-          <article class="story-block reveal">
-            <span class="story-index">Workflow</span>
-            <p>
-              I use AI-assisted development tools &mdash; including <strong>Claude</strong>,
-              <strong>Cursor</strong> and <strong>OpenAI Codex</strong> &mdash; to improve how I plan,
-              write and debug code day to day.
-            </p>
-          </article>
-          <article class="story-block reveal">
-            <span class="story-index">Growth</span>
-            <p>
-              I'm currently pursuing an <strong>MCA through Alagappa University</strong> and
-              strengthening my foundations in <strong>DSA</strong>, <strong>AWS</strong> and
-              <strong>Docker</strong> &mdash; alongside projects like <a href="#nostra">NOSTRA</a>
-              and <a href="#socialmediadb">SocialMediaDB</a>.
-            </p>
-          </article>
+        <div class="about-story reveal">
+          <p>
+            I'm <strong>Gowsikan LV</strong>, a Software Developer and Full-Stack Developer with a
+            B.Sc. in Computer Science, currently pursuing an MCA. My development focus is
+            <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>,
+            <strong>React.js</strong>, <strong>JavaScript</strong> and <strong>SQL</strong>.
+          </p>
+          <p>
+            My main project is <a class="inline-link" href="#nostra">NOSTRA</a>, a full-stack fashion
+            e-commerce platform with REST APIs built in Django REST Framework and a React 19 frontend. It
+            covers JWT authentication, customer and admin workflows, the product catalog, cart, wishlist,
+            checkout and order management, backed by automated backend tests.
+          </p>
+          <p>
+            I've worked as a Software Developer Intern at Soruban Technology and a Test Automation
+            Engineer Intern at Indium Software, using Selenium WebDriver and WCAG accessibility testing.
+            I use AI-assisted tools like Claude, Cursor and OpenAI Codex, and I enjoy building real-world
+            web applications while I keep improving as a developer.
+          </p>
         </div>
 
-        <dl class="about-facts reveal">
-          <div>
-            <dt>Location</dt>
-            <dd>Chennai, India</dd>
-          </div>
-          <div>
-            <dt>Education</dt>
-            <dd>MCA (ODL) in progress</dd>
-          </div>
-          <div>
-            <dt>Focus</dt>
-            <dd>Full-stack development &amp; AI-assisted workflows</dd>
-          </div>
-          <div>
-            <dt>Featured Project</dt>
-            <dd>NOSTRA &mdash; full-stack e-commerce</dd>
-          </div>
-        </dl>
+        <ul class="about-cards reveal">
+          <li class="about-card">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg></span>
+            <div>
+              <h3>Strong Fundamentals</h3>
+              <p>Python, SQL, REST APIs, DSA and software development fundamentals.</p>
+            </div>
+          </li>
+          <li class="about-card">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg></span>
+            <div>
+              <h3>Full-Stack Developer</h3>
+              <p>Experience across Django REST Framework, React.js, JavaScript and database-driven applications.</p>
+            </div>
+          </li>
+          <li class="about-card">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg></span>
+            <div>
+              <h3>AI-Assisted Development</h3>
+              <p>Experience using Claude, Cursor and OpenAI Codex as development tools.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+  <section id="skills" class="section" aria-labelledby="skills-heading">
     <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">02</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">Skills</span>
-      </div>
-      <h2 id="skills-heading" class="section-title reveal">Technologies I work with</h2>
+      <header class="skills-head reveal">
+        <p class="skills-eyebrow">What I work with</p>
+        <h2 id="skills-heading" class="skills-title">Skills</h2>
+        <span class="skills-rule" aria-hidden="true"></span>
+      </header>
 
       <div class="skills-grid">
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span>
-            <h3>Programming Languages</h3>
+        <article class="skill-group reveal">
+          <div class="skill-group-head">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg></span>
+            <div>
+              <h3>Languages</h3>
+              <p class="skill-count">5 technologies</p>
+            </div>
           </div>
-          <ul class="pill-list">
-            <li>Python</li><li>JavaScript ES6+</li><li>HTML5</li><li>CSS3</li><li>SQL</li>
+          <ul class="skill-rows">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-terminal"/></svg>Python</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-braces"/></svg>JavaScript</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-database"/></svg>SQL</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-code"/></svg>HTML5</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-hash"/></svg>CSS3</li>
           </ul>
-        </div>
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
-            <h3>Frontend</h3>
+        </article>
+
+        <article class="skill-group reveal">
+          <div class="skill-group-head">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layout"/></svg></span>
+            <div>
+              <h3>Frontend</h3>
+              <p class="skill-count">3 technologies</p>
+            </div>
           </div>
-          <ul class="pill-list">
-            <li>React.js</li><li>Bootstrap</li><li>Responsive Web Design</li>
+          <ul class="skill-rows">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-atom"/></svg>React.js</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layout"/></svg>Bootstrap</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-monitor"/></svg>Responsive Web Design</li>
           </ul>
-        </div>
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></svg></span>
-            <h3>Backend &amp; API</h3>
+        </article>
+
+        <article class="skill-group reveal">
+          <div class="skill-group-head">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-database"/></svg></span>
+            <div>
+              <h3>Backend &amp; Data</h3>
+              <p class="skill-count">5 technologies</p>
+            </div>
           </div>
-          <ul class="pill-list">
-            <li>RESTful APIs</li><li>Django Framework</li><li>Node.js Core Concepts</li>
+          <ul class="skill-rows">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg>Django</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-server"/></svg>Django REST Framework</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-swap"/></svg>REST APIs</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-database"/></svg>MySQL</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-table"/></svg>Relational Databases</li>
           </ul>
-        </div>
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
-            <h3>Databases</h3>
+        </article>
+
+        <article class="skill-group reveal">
+          <div class="skill-group-head">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wrench"/></svg></span>
+            <div>
+              <h3>Tools &amp; Platforms</h3>
+              <p class="skill-count">4 technologies</p>
+            </div>
           </div>
-          <ul class="pill-list">
-            <li>MySQL / Relational Databases</li>
+          <ul class="skill-rows">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-branch"/></svg>Git</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-box"/></svg>Docker (Basics)</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cloud"/></svg>AWS (Basics)</li>
           </ul>
-        </div>
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.5-9 6 6 0 0 1 11.6 1.5A4 4 0 0 1 17.5 18Z"/></svg></span>
-            <h3>Cloud &amp; DevOps</h3>
+        </article>
+
+        <article class="skill-group reveal">
+          <div class="skill-group-head">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg></span>
+            <div>
+              <h3>AI-Assisted Development</h3>
+              <p class="skill-count">4 technologies</p>
+            </div>
           </div>
-          <ul class="pill-list">
-            <li>AWS (Basics)</li><li>Docker (Basics)</li>
+          <ul class="skill-rows">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>Claude</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cursor"/></svg>Cursor</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-terminal"/></svg>OpenAI Codex</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>Prompt Engineering</li>
           </ul>
-        </div>
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg></span>
-            <h3>AI-Assisted Workflows</h3>
+        </article>
+
+        <article class="skill-group reveal">
+          <div class="skill-group-head">
+            <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></span>
+            <div>
+              <h3>Testing</h3>
+              <p class="skill-count">3 technologies</p>
+            </div>
           </div>
-          <ul class="pill-list">
-            <li>Cursor IDE</li><li>Claude</li><li>OpenAI Codex</li><li>Prompt Engineering Basics</li>
+          <ul class="skill-rows">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-browser"/></svg>Selenium WebDriver</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Test Automation</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-a11y"/></svg>WCAG Accessibility Testing</li>
           </ul>
-        </div>
-        <div class="skill-card reveal" data-tilt>
-          <div class="skill-card-head">
-            <span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M12 7v4m0 0-5.2 6.3M12 11l5.2 6.3"/></svg></span>
-            <h3>Core Concepts</h3>
-          </div>
-          <ul class="pill-list">
-            <li>Data Structures &amp; Algorithms (DSA)</li>
-          </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section" aria-labelledby="experience-heading">
+  <section id="experience" class="section section-soft" aria-labelledby="experience-heading">
     <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">03</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">Experience</span>
-      </div>
-      <h2 id="experience-heading" class="section-title reveal">Where I've worked</h2>
+      <header class="experience-head reveal">
+        <p class="experience-eyebrow">Where I've worked</p>
+        <h2 id="experience-heading" class="experience-title">Experience</h2>
+        <span class="experience-rule" aria-hidden="true"></span>
+      </header>
 
-      <ol class="timeline">
-        <li class="timeline-item reveal">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>Software Developer Intern</h3>
-              <span class="timeline-date">Apr 2026 – Jun 2026</span>
+      <ol class="xp-timeline">
+        <li class="xp-item reveal">
+          <span class="xp-marker" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-briefcase"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-head">
+              <h3 class="xp-role">Software Developer Intern</h3>
+              <p class="xp-date"><time datetime="2026-04">Apr 2026</time> – <time datetime="2026-06">Jun 2026</time></p>
             </div>
-            <p class="timeline-org">Soruban Technology Private Limited &middot; Coimbatore</p>
-            <ul>
-              <li>Developed responsive web applications using HTML, CSS, and JavaScript.</li>
-              <li>Used AI-assisted development tools such as Claude, ChatGPT, Cursor, Copilot, Gemini, and Codex for coding, debugging, and development support.</li>
-              <li>Collaborated with the development team using Git and GitHub.</li>
+            <p class="xp-company">Soruban Technology Private Limited</p>
+            <p class="xp-meta">Coimbatore, India &middot; Internship</p>
+            <p class="xp-desc">Worked on responsive web development and software development tasks using modern web technologies and AI-assisted development tools.</p>
+            <ul class="xp-list">
+              <li>Developed responsive web interfaces using HTML, CSS and JavaScript.</li>
+              <li>Used AI-assisted development tools including Claude, ChatGPT, Cursor, Copilot, Gemini and OpenAI Codex.</li>
+              <li>Used Git and GitHub for version control and development workflow.</li>
             </ul>
-          </div>
+          </article>
         </li>
-        <li class="timeline-item reveal">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>Test Automation Engineer Intern</h3>
-              <span class="timeline-date">Jun 2025 – Nov 2025</span>
+        <li class="xp-item reveal">
+          <span class="xp-marker" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-briefcase"/></svg></span>
+          <article class="xp-card">
+            <div class="xp-head">
+              <h3 class="xp-role">Test Automation Engineer Intern</h3>
+              <p class="xp-date"><time datetime="2025-06">Jun 2025</time> – <time datetime="2025-11">Nov 2025</time></p>
             </div>
-            <p class="timeline-org">Indium Software &middot; Chennai</p>
-            <ul>
+            <p class="xp-company">Indium Software</p>
+            <p class="xp-meta">Chennai, India &middot; Internship</p>
+            <p class="xp-desc">Worked on web application testing, automation and accessibility testing.</p>
+            <ul class="xp-list">
               <li>Created and worked with test cases for web applications.</li>
               <li>Used Selenium WebDriver for QA automation testing.</li>
               <li>Performed accessibility testing based on WCAG guidelines.</li>
             </ul>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section" aria-labelledby="projects-heading">
+    <div class="wrap">
+      <header class="projects-head reveal">
+        <p class="projects-eyebrow">Things I've built</p>
+        <h2 id="projects-heading" class="projects-title">Projects</h2>
+        <span class="projects-rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="project-grid">
+
+        <!-- NOSTRA -->
+        <article id="nostra" class="project-card reveal" aria-labelledby="nostra-heading">
+          <div class="project-media">
+            <svg class="pv" viewBox="0 0 320 200" role="img" aria-label="Illustration of the NOSTRA storefront: a fashion product grid with a shopping bag and cart count.">
+              <rect class="pv-window" x="24" y="22" width="272" height="200" rx="10"/>
+              <circle class="pv-dot" cx="38" cy="34" r="2.5"/><circle class="pv-dot" cx="46" cy="34" r="2.5"/><circle class="pv-dot" cx="54" cy="34" r="2.5"/>
+              <path class="pv-rule" d="M24 46h272"/>
+              <text class="pv-brand" x="36" y="64">NOSTRA</text>
+              <rect class="pv-bar" x="148" y="58" width="22" height="4" rx="2"/><rect class="pv-bar" x="178" y="58" width="22" height="4" rx="2"/><rect class="pv-bar" x="208" y="58" width="22" height="4" rx="2"/>
+              <path class="pv-stroke" d="M262 56h14l-1.5 12h-11Z M265.5 56v-2a3.5 3.5 0 0 1 7 0v2"/>
+              <circle class="pv-accent" cx="278" cy="54" r="4.5"/>
+              <rect class="pv-tint" x="36" y="76" width="248" height="30" rx="6"/>
+              <rect class="pv-accent" x="46" y="84" width="72" height="6" rx="3"/><rect class="pv-bar" x="46" y="95" width="48" height="4" rx="2"/>
+              <rect class="pv-accent-soft" x="236" y="85" width="38" height="12" rx="6"/>
+              <rect class="pv-tile" x="36" y="116" width="76" height="62" rx="6"/>
+              <rect class="pv-tile" x="122" y="116" width="76" height="62" rx="6"/>
+              <rect class="pv-tile" x="208" y="116" width="76" height="62" rx="6"/>
+              <path class="pv-garment-a" transform="translate(74 148)" d="M-13-11-6-15Q0-11 6-15L13-11 18-3 12 0V15H-12V0L-18-3Z"/>
+              <path class="pv-garment-b" transform="translate(160 148)" d="M-6-15H6L7-6 15 15H-15L-7-6Z"/>
+              <path class="pv-garment-c" transform="translate(246 148)" d="M-13-11-6-15Q0-11 6-15L13-11 18-3 12 0V15H-12V0L-18-3Z"/>
+              <rect class="pv-bar" x="36" y="185" width="44" height="4" rx="2"/><rect class="pv-accent" x="36" y="193" width="22" height="4" rx="2"/>
+              <rect class="pv-bar" x="122" y="185" width="44" height="4" rx="2"/><rect class="pv-accent" x="122" y="193" width="22" height="4" rx="2"/>
+              <rect class="pv-bar" x="208" y="185" width="44" height="4" rx="2"/><rect class="pv-accent" x="208" y="193" width="22" height="4" rx="2"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-category">Full-Stack E-Commerce</p>
+            <h3 id="nostra-heading" class="project-title">NOSTRA — Full-Stack Fashion <span class="nowrap">E-Commerce</span> Platform</h3>
+            <p class="project-desc">
+              Full-stack fashion e-commerce platform built with Django REST Framework and React 19, covering
+              customer shopping and admin management workflows.
+            </p>
+            <ul class="project-features" aria-label="Key features">
+              <li>JWT authentication with customer and admin workflows</li>
+              <li>Product and category management with search, filtering and pagination</li>
+              <li>Cart, wishlist, address management and stock-aware checkout</li>
+              <li>Order management and payment-attempt flows</li>
+              <li>407 automated backend tests</li>
+            </ul>
+            <ul class="project-pills" aria-label="Technologies">
+              <li>Python</li><li>Django</li><li>Django REST Framework</li><li>React.js</li><li>JWT</li><li>SQLite</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-btn" href="https://github.com/gowsi12303/NOSTRA" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>
+                View Code<span class="sr-only"> for NOSTRA on GitHub (opens in a new tab)</span>
+                <svg class="icon icon-ext" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SocialMediaDB -->
+        <article id="socialmediadb" class="project-card reveal" aria-labelledby="smdb-heading">
+          <div class="project-media">
+            <svg class="pv" viewBox="0 0 320 200" role="img" aria-label="Illustration of the SocialMediaDB schema: Users, Posts, Comments, Likes and Followers tables linked by relationships.">
+              <path class="pv-link" d="M195 46H228 M140 80V100H61V118 M160 80V132 M180 80V100H263V118 M96 154H125 M228 154H195"/>
+              <g transform="translate(125 22)">
+                <rect class="pv-table" width="70" height="58" rx="7"/><path class="pv-table-head" d="M0 7a7 7 0 0 1 7-7h56a7 7 0 0 1 7 7v9H0Z"/>
+                <text class="pv-table-name" x="8" y="11.5">Users</text>
+                <rect class="pv-accent" x="8" y="24" width="30" height="4" rx="2"/><rect class="pv-bar" x="8" y="34" width="46" height="4" rx="2"/><rect class="pv-bar" x="8" y="44" width="38" height="4" rx="2"/>
+              </g>
+              <g transform="translate(228 24)">
+                <rect class="pv-table" width="70" height="44" rx="7"/><path class="pv-table-head" d="M0 7a7 7 0 0 1 7-7h56a7 7 0 0 1 7 7v9H0Z"/>
+                <text class="pv-table-name" x="8" y="11.5">Followers</text>
+                <rect class="pv-accent" x="8" y="24" width="34" height="4" rx="2"/><rect class="pv-accent" x="8" y="33" width="40" height="4" rx="2"/>
+              </g>
+              <g transform="translate(26 118)">
+                <rect class="pv-table" width="70" height="58" rx="7"/><path class="pv-table-head" d="M0 7a7 7 0 0 1 7-7h56a7 7 0 0 1 7 7v9H0Z"/>
+                <text class="pv-table-name" x="8" y="11.5">Posts</text>
+                <rect class="pv-accent" x="8" y="24" width="28" height="4" rx="2"/><rect class="pv-bar" x="8" y="34" width="48" height="4" rx="2"/><rect class="pv-bar" x="8" y="44" width="36" height="4" rx="2"/>
+              </g>
+              <g transform="translate(125 132)">
+                <rect class="pv-table" width="70" height="44" rx="7"/><path class="pv-table-head" d="M0 7a7 7 0 0 1 7-7h56a7 7 0 0 1 7 7v9H0Z"/>
+                <text class="pv-table-name" x="8" y="11.5">Likes</text>
+                <rect class="pv-accent" x="8" y="24" width="30" height="4" rx="2"/><rect class="pv-bar" x="8" y="33" width="42" height="4" rx="2"/>
+              </g>
+              <g transform="translate(228 118)">
+                <rect class="pv-table" width="70" height="58" rx="7"/><path class="pv-table-head" d="M0 7a7 7 0 0 1 7-7h56a7 7 0 0 1 7 7v9H0Z"/>
+                <text class="pv-table-name" x="8" y="11.5">Comments</text>
+                <rect class="pv-accent" x="8" y="24" width="30" height="4" rx="2"/><rect class="pv-bar" x="8" y="34" width="46" height="4" rx="2"/><rect class="pv-bar" x="8" y="44" width="34" height="4" rx="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-category">Database / SQL</p>
+            <h3 id="smdb-heading" class="project-title">SocialMediaDB — Social Media Database Design</h3>
+            <p class="project-desc">
+              Social media database design project demonstrating relational database design and advanced SQL concepts.
+            </p>
+            <ul class="project-features" aria-label="Key features">
+              <li>Normalized 3NF schema with 5 related tables</li>
+              <li>Joins, aggregations and views</li>
+              <li>Stored procedures, triggers and transactions</li>
+              <li>Window functions, CTEs and indexes</li>
+            </ul>
+            <ul class="project-pills" aria-label="Technologies">
+              <li>SQL</li><li>MySQL</li><li>Database Design</li><li>Stored Procedures</li><li>Triggers</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-btn" href="https://github.com/gowsi12303/SocialMediaDB-SQL-Project" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>
+                View Code<span class="sr-only"> for SocialMediaDB on GitHub (opens in a new tab)</span>
+                <svg class="icon icon-ext" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Policy Renewal Intelligence -->
+        <article id="policy-renewal-portal" class="project-card reveal" aria-labelledby="prp-heading">
+          <div class="project-media">
+            <svg class="pv" viewBox="0 0 320 200" role="img" aria-label="Illustration of the Policy Renewal Intelligence dashboard: KPI cards with an at-risk highlight, a renewal trends chart and a renewal calendar.">
+              <defs><clipPath id="pvDashClip"><rect x="24" y="22" width="272" height="200" rx="10"/></clipPath></defs>
+              <rect class="pv-window" x="24" y="22" width="272" height="200" rx="10"/>
+              <g clip-path="url(#pvDashClip)">
+                <rect class="pv-side" x="24" y="22" width="46" height="200"/>
+                <rect class="pv-accent" x="36" y="32" width="14" height="14" rx="4"/>
+                <rect class="pv-accent-soft" x="34" y="58" width="26" height="5" rx="2.5"/>
+                <rect class="pv-bar" x="34" y="72" width="26" height="5" rx="2.5"/><rect class="pv-bar" x="34" y="86" width="26" height="5" rx="2.5"/><rect class="pv-bar" x="34" y="100" width="26" height="5" rx="2.5"/>
+              </g>
+              <rect class="pv-ink" x="80" y="32" width="72" height="7" rx="3.5"/>
+              <rect class="pv-accent-soft" x="250" y="30" width="34" height="11" rx="5.5"/>
+              <rect class="pv-card" x="80" y="48" width="64" height="34" rx="6"/>
+              <rect class="pv-bar" x="88" y="56" width="30" height="4" rx="2"/><rect class="pv-accent" x="88" y="66" width="24" height="8" rx="2"/>
+              <rect class="pv-risk-card" x="150" y="48" width="64" height="34" rx="6"/>
+              <rect class="pv-bar" x="158" y="56" width="30" height="4" rx="2"/><rect class="pv-risk" x="158" y="66" width="20" height="8" rx="2"/>
+              <rect class="pv-card" x="220" y="48" width="64" height="34" rx="6"/>
+              <rect class="pv-bar" x="228" y="56" width="30" height="4" rx="2"/><rect class="pv-accent" x="228" y="66" width="28" height="8" rx="2"/>
+              <rect class="pv-card" x="80" y="90" width="134" height="92" rx="6"/>
+              <rect class="pv-bar" x="88" y="98" width="40" height="4" rx="2"/>
+              <rect class="pv-accent-soft" x="92" y="146" width="11" height="24" rx="2"/><rect class="pv-accent-soft" x="109" y="136" width="11" height="34" rx="2"/>
+              <rect class="pv-accent-soft" x="126" y="150" width="11" height="20" rx="2"/><rect class="pv-accent-soft" x="143" y="128" width="11" height="42" rx="2"/>
+              <rect class="pv-accent-soft" x="160" y="140" width="11" height="30" rx="2"/><rect class="pv-accent" x="177" y="118" width="11" height="52" rx="2"/>
+              <rect class="pv-accent-soft" x="194" y="132" width="11" height="38" rx="2"/>
+              <path class="pv-trend" d="M97 140 114 128 131 136 148 118 165 126 182 108 199 116"/>
+              <rect class="pv-card" x="220" y="90" width="64" height="92" rx="6"/>
+              <rect class="pv-bar" x="228" y="98" width="30" height="4" rx="2"/>
+              <g class="pv-cal" transform="translate(228 110)">
+                <rect x="0" y="0" width="9" height="9" rx="2"/><rect x="12" y="0" width="9" height="9" rx="2"/><rect class="pv-accent" x="24" y="0" width="9" height="9" rx="2"/><rect x="36" y="0" width="9" height="9" rx="2"/>
+                <rect x="0" y="12" width="9" height="9" rx="2"/><rect class="pv-risk" x="12" y="12" width="9" height="9" rx="2"/><rect x="24" y="12" width="9" height="9" rx="2"/><rect x="36" y="12" width="9" height="9" rx="2"/>
+                <rect x="0" y="24" width="9" height="9" rx="2"/><rect x="12" y="24" width="9" height="9" rx="2"/><rect x="24" y="24" width="9" height="9" rx="2"/><rect class="pv-accent" x="36" y="24" width="9" height="9" rx="2"/>
+                <rect class="pv-accent-soft" x="0" y="36" width="9" height="9" rx="2"/><rect x="12" y="36" width="9" height="9" rx="2"/><rect x="24" y="36" width="9" height="9" rx="2"/><rect x="36" y="36" width="9" height="9" rx="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-category">Insurance / FinTech Frontend</p>
+            <h3 id="prp-heading" class="project-title">Policy Renewal Intelligence</h3>
+            <p class="project-desc">
+              Responsive broker portal for monitoring policy renewals, identifying at-risk policies and performing
+              common policy self-service workflows.
+            </p>
+            <ul class="project-features" aria-label="Key features">
+              <li>Renewal intelligence dashboard with at-risk policy identification</li>
+              <li>Broker self-service workflows and a policy renewal calendar</li>
+              <li>Analytics and renewal trends</li>
+              <li>Responsive, accessibility-focused UI built on realistic mock data</li>
+            </ul>
+            <ul class="project-pills" aria-label="Technologies">
+              <li>React</li><li>Vite</li><li>JavaScript</li><li>React Router</li><li>Recharts</li><li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-btn" href="https://github.com/gowsi12303/policy-renewal-portal" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>
+                View Code<span class="sr-only"> for Policy Renewal Intelligence on GitHub (opens in a new tab)</span>
+                <svg class="icon icon-ext" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+              <a class="project-btn" href="https://policy-renewal-portal.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Live Demo<span class="sr-only"> of Policy Renewal Intelligence (opens in a new tab)</span>
+                <svg class="icon icon-ext" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="projects-more reveal">
+        <a class="link-arrow" href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer">
+          See more on GitHub
+          <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section section-soft edu-section" aria-labelledby="education-heading">
+    <div class="wrap">
+      <header class="education-head reveal">
+        <p class="education-eyebrow">My background</p>
+        <h2 id="education-heading" class="education-title">Education</h2>
+        <span class="education-rule" aria-hidden="true"></span>
+      </header>
+
+      <ol class="edu-list">
+        <li class="edu-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg></span>
+          <div class="edu-body">
+            <div class="edu-head">
+              <h3 class="edu-school">Alagappa University</h3>
+              <p class="edu-date"><time datetime="2025">2025</time> – Present</p>
+            </div>
+            <p class="edu-program">Master of Computer Applications (MCA)</p>
+            <p class="edu-mode">Open and Distance Learning (ODL)</p>
+            <p class="edu-desc">Currently pursuing MCA with a focus on strengthening software development, programming and application development skills.</p>
+          </div>
+        </li>
+        <li class="edu-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cap"/></svg></span>
+          <div class="edu-body">
+            <div class="edu-head">
+              <h3 class="edu-school">Bishop Heber College</h3>
+              <p class="edu-date"><time datetime="2022">2022</time> – <time datetime="2025">2025</time></p>
+            </div>
+            <p class="edu-program">B.Sc. Computer Science</p>
+            <p class="edu-mode">Full Time</p>
+            <p class="edu-desc">Completed undergraduate studies in Computer Science with a foundation in programming, databases, software development and computer science concepts.</p>
           </div>
         </li>
       </ol>
     </div>
   </section>
 
-  <div id="projects" class="projects-group">
-
-  <!-- FEATURED PROJECT: NOSTRA -->
-  <section id="nostra" class="section section-no-divider nostra-section" aria-labelledby="nostra-heading">
-    <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index kicker-index-flagship">04</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label kicker-label-flagship">Featured Project</span>
-      </div>
-      <h2 id="nostra-heading" class="section-title nostra-title reveal">NOSTRA &mdash; Fashion E&#8209;commerce Backend (REST API)</h2>
-
-      <div class="nostra-card-shell reveal">
-        <div class="nostra-card">
-        <div class="nostra-status-row">
-          <span class="badge badge-flagship badge-static">
-            <span class="badge-dot" aria-hidden="true"></span>
-            Functionally Complete
-          </span>
-          <a class="btn btn-outline btn-small" href="https://github.com/gowsi12303/NOSTRA" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-            View Source on GitHub
-          </a>
-        </div>
-
-        <p class="nostra-intro">
-          A full-stack fashion e-commerce platform with a <strong>Django REST Framework backend</strong>
-          and a <strong>React 19 frontend</strong>, covering both customer shopping and admin
-          management workflows, secured with JWT authentication.
-        </p>
-
-        <div class="nostra-meta-row">
-          <div class="nostra-meta-item">
-            <span class="meta-label">Status</span>
-            <span class="meta-value">Functionally Complete</span>
-          </div>
-          <div class="nostra-meta-item">
-            <span class="meta-label">Layers Built</span>
-            <span class="meta-value">Backend + Frontend</span>
-          </div>
-          <div class="nostra-meta-item">
-            <span class="meta-label">Stack</span>
-            <span class="meta-value">Django REST Framework &middot; React 19</span>
-          </div>
-          <div class="nostra-meta-item">
-            <span class="meta-label">Testing</span>
-            <span class="meta-value">407 automated backend tests</span>
-          </div>
-        </div>
-
-        <div class="nostra-callout">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-          <p>
-            <strong>Production status:</strong> all core customer and admin features work end to end,
-            but NOSTRA is not yet production-hardened or deployed. It runs locally with SQLite as the
-            development database.
-          </p>
-        </div>
-
-        <h3 class="nostra-subheading">Architecture</h3>
-        <div class="nostra-architecture" role="img" aria-label="Architecture, top to bottom: the implemented React 19 frontend, connecting down to the implemented Django REST Framework backend with JWT authentication, connecting down to the SQLite development database.">
-          <div class="arch-node arch-node-live">
-            <span class="arch-node-category">Frontend</span>
-            <span class="arch-node-tech">React 19</span>
-            <span class="arch-node-status">Implemented</span>
-          </div>
-          <div class="arch-arrow" aria-hidden="true"></div>
-          <div class="arch-node arch-node-live">
-            <span class="arch-node-category">Backend</span>
-            <span class="arch-node-tech">Django REST Framework</span>
-            <span class="arch-node-status">Implemented</span>
-          </div>
-          <div class="arch-arrow" aria-hidden="true"></div>
-          <div class="arch-node arch-node-live">
-            <span class="arch-node-category">Database</span>
-            <span class="arch-node-tech">SQLite</span>
-            <span class="arch-node-status">Development</span>
-          </div>
-        </div>
-
-        <div class="nostra-stack">
-          <span class="stack-badge">Python</span>
-          <span class="stack-badge">Django</span>
-          <span class="stack-badge">Django REST Framework</span>
-          <span class="stack-badge">React 19</span>
-          <span class="stack-badge">REST API</span>
-          <span class="stack-badge">JWT</span>
-          <span class="stack-badge">SQLite</span>
-        </div>
-
-        <div class="nostra-features">
-          <div class="feature-col">
-            <h3>
-              <svg class="icon icon-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
-              Customer Storefront
-            </h3>
-            <div class="chip-grid">
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Product Browsing</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Product Details</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Pagination</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Filtering &amp; Sorting</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Cart</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Wishlist</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Address Management</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Checkout</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Order History</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Order Cancellation</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Payment-Attempt Flows</div>
-            </div>
-            <p class="nostra-implementation-note">
-              Backend: product/category APIs with JWT authentication and ownership-based access
-              control; stock-aware cart and checkout logic using database transactions and row-level
-              locking; <code>select_related</code> / <code>prefetch_related</code> query optimization;
-              407 automated backend tests covering models, serializers, views, authentication and API
-              behavior.
-            </p>
-          </div>
-          <div class="feature-col">
-            <h3>
-              <svg class="icon icon-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
-              Admin Panel
-            </h3>
-            <div class="chip-grid">
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Dashboard</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Categories</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Products</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Variants &amp; Inventory</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Orders</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Customers</div>
-              <div class="feature-chip reveal"><span class="chip-check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Payments</div>
-            </div>
-          </div>
-        </div>
-
-        <p class="nostra-footnote">No live demo yet &mdash; NOSTRA is not yet production-hardened or deployed. Explore the backend, React 19 frontend and test suite on GitHub.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MORE PROJECTS: SOCIALMEDIADB -->
-  <section id="work" class="section section-alt" aria-labelledby="work-heading">
-    <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">05</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">More Projects</span>
-      </div>
-      <h2 id="work-heading" class="section-title reveal">More projects</h2>
-
-      <div class="work-grid">
-        <div id="socialmediadb" class="work-card reveal" data-tilt>
-          <h3>SocialMediaDB &mdash; Social Media Database Design</h3>
-          <p class="work-tech">MySQL &middot; SQL</p>
-          <ul>
-            <li>Designed a normalized (3NF) relational database with 5 tables: Users, Posts, Comments, Likes and Followers.</li>
-            <li>Defined primary and foreign keys, including a self-referencing Followers relationship.</li>
-            <li>Wrote INNER, LEFT, RIGHT, CROSS and self joins, GROUP BY / HAVING aggregations, and string and date functions.</li>
-            <li>Built 8 views, 3 stored procedures and an AFTER INSERT trigger for user audit logging.</li>
-            <li>Handled transactions with COMMIT, ROLLBACK and SAVEPOINT.</li>
-            <li>Used window functions (ROW_NUMBER, RANK, NTILE), CTEs, and single and composite indexes.</li>
-          </ul>
-          <a class="link-arrow" href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer">
-            See more on GitHub
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-          </a>
-        </div>
-
-        <div id="policy-renewal-portal" class="work-card reveal" data-tilt>
-          <h3>Policy Renewal Intelligence &amp; Broker Self&#8209;Serve Portal</h3>
-          <p class="work-tech">React &middot; Vite &middot; JavaScript &middot; React Router &middot; Recharts &middot; CSS</p>
-          <ul>
-            <li>Insurance / FinTech frontend prototype: a responsive broker portal for monitoring policy renewals, identifying at-risk policies and performing common policy self-service workflows.</li>
-            <li>Renewal intelligence dashboard with at-risk policy identification.</li>
-            <li>Broker self-service workflows and a policy renewal calendar.</li>
-            <li>Analytics and renewal trends.</li>
-            <li>Responsive, accessibility-focused UI built on realistic mock data.</li>
-          </ul>
-          <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <a class="link-arrow" href="https://github.com/gowsi12303/policy-renewal-portal" target="_blank" rel="noopener noreferrer">
-              View on GitHub
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-            </a>
-            <a class="link-arrow" href="https://policy-renewal-portal.vercel.app" target="_blank" rel="noopener noreferrer">
-              Live Demo
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  </div><!-- /#projects -->
-
-  <!-- EDUCATION -->
-  <section id="education" class="section" aria-labelledby="education-heading">
-    <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">06</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">Education</span>
-      </div>
-      <h2 id="education-heading" class="section-title reveal">Academic background</h2>
-
-      <ul class="edu-grid">
-        <li class="edu-card reveal" data-tilt>
-          <div class="edu-card-head">
-            <span class="edu-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></span>
-            <span class="edu-date">2025 &ndash; Present</span>
-          </div>
-          <strong>Master of Computer Applications (MCA) &ndash; ODL</strong>
-          <p>Alagappa University &middot; Karaikudi</p>
-        </li>
-        <li class="edu-card reveal" data-tilt>
-          <div class="edu-card-head">
-            <span class="edu-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></span>
-            <span class="edu-date">2022 &ndash; 2025</span>
-          </div>
-          <strong>Bachelor of Science in Computer Science (B.Sc. CS)</strong>
-          <p>Bishop Heber College &middot; Tiruchirappalli</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="section section-alt" aria-labelledby="certifications-heading">
+  <section id="certifications" class="section section-soft certs-section" aria-labelledby="certifications-heading">
     <div class="wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">07</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">Certifications</span>
-      </div>
-      <h2 id="certifications-heading" class="section-title reveal">Certifications</h2>
+      <header class="certifications-head reveal">
+        <p class="certifications-eyebrow">Certifications</p>
+        <h2 id="certifications-heading" class="certifications-title">Certifications</h2>
+        <span class="certifications-rule" aria-hidden="true"></span>
+      </header>
 
-      <ul class="cert-grid">
-        <li class="cert-card reveal" data-tilt>
-          <span class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"/></svg></span>
-          <strong>One Million Prompters Program</strong>
-          <span>Dubai Future Foundation</span>
+      <ul class="cert-list">
+        <li class="cert-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg></span>
+          <h3 class="cert-name">Employability Skills Certification</h3>
+          <p class="cert-issuer">Bishop Heber College</p>
         </li>
-        <li class="cert-card reveal" data-tilt>
-          <span class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"/></svg></span>
-          <strong>Accessibility Testing (WCAG)</strong>
-          <span>Indium Software</span>
+        <li class="cert-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg></span>
+          <h3 class="cert-name">Quality Engineering Internship</h3>
+          <p class="cert-issuer">Indium Software</p>
         </li>
-        <li class="cert-card reveal" data-tilt>
-          <span class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"/></svg></span>
-          <strong>Quality Engineering Internship</strong>
-          <span>Indium Software</span>
+        <li class="cert-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg></span>
+          <h3 class="cert-name">One Million Prompters Program</h3>
+          <p class="cert-issuer">Dubai Future Foundation</p>
         </li>
-        <li class="cert-card reveal" data-tilt>
-          <span class="cert-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8 5-3 5 3-1.5-8"/></svg></span>
-          <strong>Employability Skills Certification</strong>
-          <span>Bishop Heber College</span>
+        <li class="cert-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-award"/></svg></span>
+          <h3 class="cert-name">Accessibility Testing (WCAG)</h3>
+          <p class="cert-issuer">Indium Software</p>
         </li>
       </ul>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section-alt" aria-labelledby="contact-heading">
-    <div class="wrap contact-wrap">
-      <div class="section-kicker reveal">
-        <span class="kicker-index">08</span>
-        <span class="kicker-line" aria-hidden="true"></span>
-        <span class="kicker-label">Contact</span>
-      </div>
-
-      <div class="contact-panel reveal">
-        <h2 id="contact-heading" class="contact-cta-heading">Have a project in mind?<br><span class="accent-text">Let's build something useful.</span></h2>
-        <p class="contact-lead">
-          Open to Software Developer roles and opportunities to build with modern, full-stack, AI-assisted
-          workflows. Feel free to reach out.
+  <section id="contact" class="section" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <header class="contact-head reveal">
+        <p class="contact-eyebrow">Let's connect</p>
+        <h2 id="contact-heading" class="contact-title">Contact</h2>
+        <span class="contact-rule" aria-hidden="true"></span>
+        <p class="contact-intro">
+          I'm open to software development opportunities, internships and collaborations. Whether it's a role,
+          a project or a question, feel free to reach out.
         </p>
+      </header>
 
-        <div class="contact-grid">
-          <a class="contact-card" href="mailto:gowsikanlakshmanan@gmail.com" data-tilt>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
-            <span>
-              <strong>Email</strong>
-              gowsikanlakshmanan@<wbr />gmail.com
-            </span>
-          </a>
-          <a class="contact-card" href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer" data-tilt>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-            <span>
-              <strong>GitHub</strong>
-              github.com/gowsi12303
-            </span>
-          </a>
-          <a class="contact-card" href="https://www.linkedin.com/in/gowsikan-lv-08431725a/" target="_blank" rel="noopener noreferrer" data-tilt>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5v11M6.5 5.01V5m-.01 0a1.5 1.5 0 1 1 0-.01ZM11 8.5v11m0-6.5c0-2.5 2-4.5 4.5-4.5S20 10.5 20 13v6.5"/></svg>
-            <span>
-              <strong>LinkedIn</strong>
-              in/gowsikan-lv-08431725a
-            </span>
-          </a>
-          <a class="contact-card" href="assets/Gowsikan_LV_Resume.pdf" download="Gowsikan_LV_Resume.pdf" data-tilt>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-            <span>
-              <strong>Resume</strong>
-              Download PDF
-            </span>
-          </a>
+      <div class="contact-grid">
+        <div class="contact-panel reveal">
+          <h3 class="contact-panel-title">Contact Information</h3>
+          <ul class="contact-list">
+            <li>
+              <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
+              <span class="contact-item-text">
+                <span class="contact-label">Email</span>
+                <a class="contact-value" href="mailto:gowsikanlakshmanan@gmail.com">gowsikanlakshmanan@<wbr />gmail.com</a>
+              </span>
+            </li>
+            <li>
+              <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span>
+              <span class="contact-item-text">
+                <span class="contact-label">Phone</span>
+                <a class="contact-value" href="tel:+919894341940">+91 98943 41940</a>
+              </span>
+            </li>
+            <li>
+              <span class="card-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg></span>
+              <span class="contact-item-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Chennai, Tamil Nadu, India</span>
+              </span>
+            </li>
+          </ul>
+
+          <h3 class="contact-panel-subtitle">Connect with me</h3>
+          <div class="contact-social">
+            <a class="project-btn" href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>
+              GitHub<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+            <a class="project-btn" href="https://www.linkedin.com/in/gowsikan-lv-08431725a/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg>
+              LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
         </div>
 
-        <p class="contact-location">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          Chennai, India &middot; <a href="tel:+919894341940" class="contact-location-phone">+91 98943 41940</a>
-        </p>
+        <!-- No backend: the form validates in the browser, then hands the message to the visitor's email app via mailto. -->
+        <form class="contact-panel contact-form reveal" id="contactForm" novalidate aria-labelledby="contact-form-title">
+          <h3 id="contact-form-title" class="contact-panel-title">Drop me a message</h3>
+
+          <div class="field">
+            <label for="cfName">Full Name</label>
+            <input id="cfName" name="name" type="text" autocomplete="name" required aria-describedby="cfNameError" />
+            <p class="field-error" id="cfNameError" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="cfEmail">Email</label>
+            <input id="cfEmail" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="cfEmailError" />
+            <p class="field-error" id="cfEmailError" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="cfMessage">Message</label>
+            <textarea id="cfMessage" name="message" rows="5" required aria-describedby="cfMessageError"></textarea>
+            <p class="field-error" id="cfMessageError" hidden></p>
+          </div>
+
+          <button class="btn btn-primary contact-submit" type="submit">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+            Send Message
+          </button>
+          <p class="form-note" id="contactFormNote">
+            This opens your email app with the message ready to send &mdash; nothing is sent from this page.
+          </p>
+          <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -676,32 +843,13 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><span>GL</span></span>Gowsikan<span class="accent">.</span>LV</a>
-
-    <ul class="footer-nav">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="footer-social">
-      <a href="https://github.com/gowsi12303" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/gowsikan-lv-08431725a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5v11M6.5 5.01V5m-.01 0a1.5 1.5 0 1 1 0-.01ZM11 8.5v11m0-6.5c0-2.5 2-4.5 4.5-4.5S20 10.5 20 13v6.5"/></svg>
-      </a>
-      <a href="mailto:gowsikanlakshmanan@gmail.com" aria-label="Email">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+    <p>&copy; <span id="year">2026</span> Gowsikan LV. All rights reserved.</p>
+    <div class="footer-end">
+      <p>Built with HTML, CSS &amp; JavaScript.</p>
+      <a class="back-to-top" href="#home" aria-label="Back to top">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up"/></svg>
       </a>
     </div>
-  </div>
-  <div class="wrap footer-bottom">
-    <p>&copy; <span id="year"></span> Gowsikan LV. Built with HTML, CSS &amp; JavaScript.</p>
-    <a class="back-to-top" href="#top" aria-label="Back to top">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-    </a>
   </div>
 </footer>
 
