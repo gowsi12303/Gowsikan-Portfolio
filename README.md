@@ -14,21 +14,20 @@ https://gowsikan-portfolio-ivory.vercel.app/
 - About
 - Skills
 - Experience
-- Featured Project — NOSTRA
-- More Projects — SocialMediaDB
+- Projects — NOSTRA (featured), SocialMediaDB, Policy Renewal Intelligence
 - Education
 - Certifications
 - Contact
 
 ## 🚀 Featured Project — NOSTRA
 
-**NOSTRA — Fashion E-commerce Backend (REST API)**
+**NOSTRA — Full-Stack Fashion E-Commerce Platform**
 
 A full-stack fashion e-commerce platform with a Django REST Framework backend and a React 19 frontend, supporting customer shopping and admin management workflows.
 
 **Status:** Functionally complete — not yet production-hardened or deployed. Runs locally with SQLite as the development database.
 
-**Tech:** Python · Django · Django REST Framework · React 19 · REST API · JWT · SQLite
+**Tech:** Python · Django · Django REST Framework · React 19 · REST APIs · JWT · SQLite
 
 **Customer storefront**
 - Product browsing and product details
@@ -48,11 +47,30 @@ A full-stack fashion e-commerce platform with a Django REST Framework backend an
 - Query optimization with `select_related` / `prefetch_related`
 - 407 automated backend tests covering models, serializers, views, authentication and API behavior
 
-GitHub: https://github.com/gowsi12303/NOSTRA
+**GitHub:** https://github.com/gowsi12303/NOSTRA
 
 > There is no live demo of NOSTRA yet — the source code and test suite are available on GitHub.
 
-## 🗄️ More Projects — SocialMediaDB
+## 📊 Policy Renewal Intelligence
+
+**Insurance / FinTech Frontend Prototype**
+
+A responsive broker portal for monitoring policy renewals, identifying at-risk policies and performing common policy self-service workflows.
+
+**Tech:** React · Vite · JavaScript · React Router · Recharts · CSS
+
+- Renewal intelligence dashboard with at-risk policy identification
+- Broker self-service workflows
+- Policy renewal calendar
+- Analytics and renewal trends
+- Responsive, accessibility-focused UI
+- Realistic mock data
+
+**GitHub:** https://github.com/gowsi12303/policy-renewal-portal
+
+**Live Demo:** https://policy-renewal-portal.vercel.app/
+
+## 🗄️ SocialMediaDB
 
 **SocialMediaDB — Social Media Database Design (SQL)**
 
@@ -64,6 +82,8 @@ GitHub: https://github.com/gowsi12303/NOSTRA
 - 8 views, 3 stored procedures and an AFTER INSERT trigger for user audit logging
 - COMMIT, ROLLBACK and SAVEPOINT transactions
 - Window functions (ROW_NUMBER, RANK, NTILE), CTEs, and single/composite indexes
+
+**GitHub:** https://github.com/gowsi12303/SocialMediaDB-SQL-Project
 
 ## 🛠️ Skills
 
@@ -100,16 +120,17 @@ GitHub: https://github.com/gowsi12303/NOSTRA
 - Quality Engineering Internship — Indium Software
 - Employability Skills Certification — Bishop Heber College
 
-## 📬 Contact
+## 🧑‍💻 About This Portfolio
 
-- **Email:** gowsikanlakshmanan@gmail.com
-- **GitHub:** [github.com/gowsi12303](https://github.com/gowsi12303)
-- **LinkedIn:** [linkedin.com/in/gowsikan-lv-08431725a](https://www.linkedin.com/in/gowsikan-lv-08431725a/)
-- **Portfolio:** [gowsikan-portfolio-ivory.vercel.app](https://gowsikan-portfolio-ivory.vercel.app/)
+Built with plain HTML, CSS and JavaScript — no frameworks or build step.
 
-## 📄 Resume
-
-My latest resume can be downloaded from the portfolio's **Resume** button, or directly from [`assets/Gowsikan_LV_Resume.pdf`](assets/Gowsikan_LV_Resume.pdf).
+- Responsive design and responsive navigation
+- Accessible semantic structure, skip link and keyboard focus states
+- SEO metadata and Open Graph tags
+- Light/dark theme
+- Animated hero particle background
+- Typewriter hero roles
+- Respects `prefers-reduced-motion`
 
 ## 📁 Project Structure
 
@@ -129,17 +150,19 @@ Gowsikan-Portfolio/
 └── README.md
 ```
 
-## 🧑‍💻 About This Portfolio
+## 📄 Resume
 
-Built with plain HTML, CSS and JavaScript — no frameworks or build step.
+My latest resume can be downloaded from the portfolio's **Resume** button, or directly from [`assets/Gowsikan_LV_Resume.pdf`](assets/Gowsikan_LV_Resume.pdf).
 
-- Responsive layout from mobile to wide desktop
-- Accessible: semantic sections, skip link, keyboard focus states
-- SEO metadata and Open Graph tags
-- Respects `prefers-reduced-motion`
-- Subtle animated interactions
+## 📬 Contact
+
+- **Email:** gowsikanlakshmanan@gmail.com
+- **GitHub:** [github.com/gowsi12303](https://github.com/gowsi12303)
+- **LinkedIn:** [linkedin.com/in/gowsikan-lv-08431725a](https://www.linkedin.com/in/gowsikan-lv-08431725a/)
+- **Portfolio:** [gowsikan-portfolio-ivory.vercel.app](https://gowsikan-portfolio-ivory.vercel.app/)
 
 ## 📌 Status
 
 - **Portfolio:** Live
 - **NOSTRA:** Functionally complete — not yet production-hardened or deployed
+- **Policy Renewal Intelligence:** Frontend prototype with mock data — live demo available
