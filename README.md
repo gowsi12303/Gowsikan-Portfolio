@@ -14,7 +14,7 @@ https://gowsikan-portfolio-ivory.vercel.app/
 - About
 - Skills
 - Experience
-- Projects — NOSTRA (featured), SocialMediaDB, Policy Renewal Intelligence
+- Projects — NOSTRA (featured), SocialMediaDB, Policy Renewal Intelligence, Advanced CRM Dashboard
 - Education
 - Certifications
 - Contact
@@ -84,6 +84,24 @@ A responsive broker portal for monitoring policy renewals, identifying at-risk p
 - Window functions (ROW_NUMBER, RANK, NTILE), CTEs, and single/composite indexes
 
 **GitHub:** https://github.com/gowsi12303/SocialMediaDB-SQL-Project
+
+## 📈 Advanced CRM Dashboard
+
+**Full-Stack CRM Dashboard**
+
+A modern full-stack CRM dashboard for managing customers, sales pipelines, and customer workflows with a responsive interface and production-style frontend architecture.
+
+**Tech:** Next.js 16 · React 19 · TypeScript · Tailwind CSS · shadcn/ui · TanStack Query · React Hook Form · Zod · dnd-kit · Vitest
+
+- Customer CRUD with search, sorting, pagination, and advanced filters
+- Saved filters and reusable filter templates
+- Drag-and-drop sales pipeline with keyboard support
+- Bulk actions and CSV export
+- Dashboard analytics, responsive UI, dark/light/system themes, and accessibility features
+
+**GitHub:** https://github.com/gowsi12303/Advanced-CRM-Dashboard
+
+> There is no live demo of the Advanced CRM Dashboard yet — the source code is available on GitHub.
 
 ## 🛠️ Skills
 
@@ -166,3 +184,4 @@ My latest resume can be downloaded from the portfolio's **Resume** button, or di
 - **Portfolio:** Live
 - **NOSTRA:** Functionally complete — not yet production-hardened or deployed
 - **Policy Renewal Intelligence:** Frontend prototype with mock data — live demo available
+- **Advanced CRM Dashboard:** Completed — source code on GitHub, no live demo
